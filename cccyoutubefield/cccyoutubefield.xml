@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="fields" method="upgrade">
+	<name>plg_fields_cccyoutubefield</name>
+	<author>Elisa Foltyn</author>
+	<creationDate>2017</creationDate>
+	<copyright>Copyright (C) 2017 - coolcat-creations.com, Elisa Foltyn</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>contact@coolcat-creations.com</authorEmail>
+	<authorUrl>www.coolcat-creations.com</authorUrl>
+	<version>1.0</version>
+	<description>PLG_FIELDS_CCCYOUTUBEFIELD_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="cccyoutubefield">cccyoutubefield.php</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+</extension>
