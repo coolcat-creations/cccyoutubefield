@@ -3,8 +3,6 @@
 	$(function() {
 		var cccyoutubefield = $('.cccyoutubefield');
 
-		console.log(cccyoutubefield);
-
 		cccyoutubefield.each(function () {
 			var field = this;
 
