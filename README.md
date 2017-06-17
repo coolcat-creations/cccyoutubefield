@@ -1,5 +1,5 @@
 # cccyoutubefield
-CustomField plugin for Joomla! - Responsive Youtube embed with "lazyload"
+CustomField plugin for Joomla! - Responsive Youtube embed with „load on click" 
 
 ## Installation
 Install this plugin through the Joomla! Extensions Manager
