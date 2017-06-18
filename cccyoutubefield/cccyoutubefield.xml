@@ -13,7 +13,6 @@
 		<filename plugin="cccyoutubefield">cccyoutubefield.php</filename>
 		<folder>css</folder>
 		<folder>js</folder>
-		<folder>language</folder>
 		<folder>tmpl</folder>
 	</files>
 </extension>
