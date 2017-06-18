@@ -11,18 +11,15 @@ defined('_JEXEC') or die();
 
 $value = $field->value;
 
-if (!$value) {
+if (!$value)
+{
 	return;
 }
 
 // Loading the javascript and css
 $doc = JFactory::getDocument();
-
-JHtml::_('jQuery.Framework');
-
 $doc->addStylesheet('plugins/fields/cccyoutubefield/css/cccyoutubefield.css');
 $doc->addScript('plugins/fields/cccyoutubefield/js/cccyoutubefield.js');
-
 
 if (is_array($value))
 {
