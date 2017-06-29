@@ -24,6 +24,11 @@
 
 			field.addEventListener('click', function(event) {
 
+				// Create the div container
+				var div = document.createElement('div');
+				div.classList.add('cccyoutubefield');
+				
+				// Create the iframe
 				var iframe = document.createElement('iframe');
 
 				// Setup the initiale iframe
@@ -36,6 +41,9 @@
 
 				// Replace the image with the iframe
 				this.parentNode.replaceChild(iframe, this);
+				
+				// Put the iframe inside the div container
+				div.appendChild(iframe);
 
 			});
 
