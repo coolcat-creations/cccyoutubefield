@@ -9,6 +9,9 @@
 	<authorUrl>www.coolcat-creations.com</authorUrl>
 	<version>1.0</version>
 	<description>PLG_FIELDS_CCCYOUTUBEFIELD_XML_DESCRIPTION</description>
+	<updateservers>
+		<server type="extension" priority="1" name="CCC Youtube Field Update Site">		https://raw.githubusercontent.com/coolcat-creations/cccyoutubefield/blob/master/manifest.xml</server>
+	</updateservers>
 	<files>
 		<filename plugin="cccyoutubefield">cccyoutubefield.php</filename>
 		<folder>tmpl</folder>
