@@ -17,9 +17,8 @@ if (!$value)
 }
 
 // Loading the javascript and css
-$doc = JFactory::getDocument();
-$doc->addStylesheet('plugins/fields/cccyoutubefield/css/cccyoutubefield.css');
-$doc->addScript('plugins/fields/cccyoutubefield/js/cccyoutubefield.js');
+JHtml::_('stylesheet', 'plg_fields_cccyoutubefield/cccyoutubefield.css', array('version' => 'auto', 'relative' => true));
+JHtml::_('script', 'plg_fields_cccyoutubefield/cccyoutubefield.js', array('version' => 'auto', 'relative' => true));
 
 if (is_array($value))
 {
