@@ -24,7 +24,15 @@
 
 			field.addEventListener('click', function(event) {
 
+				// Create the div container
+				var div = document.createElement('div');
+				div.classList.add('cccyoutubefield');
+
+				// Create the iframe
 				var iframe = document.createElement('iframe');
+
+				// Put the iframe inside the div container
+				div.appendChild(iframe);
 
 				// Setup the initiale iframe
 				iframe.setAttribute('src', '//www.youtube.com/embed/' + field.dataset.embed + '?rel=0&showinfo=0&autoplay=1');
@@ -35,7 +43,7 @@
 				iframe.setAttribute('height', height);
 
 				// Replace the image with the iframe
-				this.parentNode.replaceChild(iframe, this);
+				this.parentNode.replaceChild(div, this);
 
 			});
 
