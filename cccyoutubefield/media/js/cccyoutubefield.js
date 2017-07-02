@@ -2,34 +2,53 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 
-		( function() {
+		var cccyoutubefield = document.querySelectorAll('.cccyoutubefield');
 
-			var youtube = document.querySelectorAll( ".cccyoutubefield" );
+		for (var i = 0; i < cccyoutubefield.length; i++) {
 
-			for (var i = 0; i < youtube.length; i++) {
+			var field  = cccyoutubefield[i],
+			    embed  = field.getAttribute('data-embed'),
+			    source = 'https://img.youtube.com/vi/' + embed + '/sddefault.jpg',
+			    width, height;
 
-				var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
+			// Create new image and set the source
+			var image = new Image();
+			image.src = source;
 
-				var image = new Image();
-				image.src = source;
-				image.addEventListener( "load", function() {
-					youtube[ i ].appendChild( image );
-				}( i ) );
+			image.addEventListener('load', function() {
+				field.appendChild(image);
 
-				youtube[i].addEventListener( "click", function() {
+				// Get the image dimensions
+				width  = image.width;
+				height = image.height;
+			}(i));
 
-					var iframe = document.createElement( "iframe" );
+			field.addEventListener('click', function(event) {
 
-					iframe.setAttribute( "frameborder", "0" );
-					iframe.setAttribute( "allowfullscreen", "" );
-					iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+				// Create the div container
+				var div = document.createElement('div');
+				div.classList.add('cccyoutubefield');
 
-					this.innerHTML = "";
-					this.appendChild( iframe );
-				} );
-			};
+				// Create the iframe
+				var iframe = document.createElement('iframe');
 
-		} )();
+				// Put the iframe inside the div container
+				div.appendChild(iframe);
+
+				// Setup the initiale iframe
+				iframe.setAttribute('src', '//www.youtube.com/embed/' + embed + '?rel=0&showinfo=0&autoplay=1');
+				iframe.setAttribute('frameborder', '0');
+
+				// Set the iframe dimensions to be the same as the image
+				iframe.setAttribute('width', width);
+				iframe.setAttribute('height', height);
+
+				// Replace the image with the iframe
+				this.parentNode.replaceChild(div, this);
+
+			});
+
+		}
 	});
 
 })();
