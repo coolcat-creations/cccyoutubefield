@@ -35,7 +35,7 @@
 				// Put the iframe inside the div container
 				div.appendChild(iframe);
 
-				// Setup the initiale iframe
+				// Setup the initial iframe
 				iframe.setAttribute('src', '//www.youtube.com/embed/' + embed + '?rel=0&showinfo=0&autoplay=1');
 				iframe.setAttribute('frameborder', '0');
 
